@@ -5,3 +5,4 @@ function showMessage() {
 function showAlert() {
     alert("Message sent successfully!");
 }
+
