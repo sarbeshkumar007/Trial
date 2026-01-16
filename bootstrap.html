@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
   <title>Contact Us</title>
@@ -39,6 +39,158 @@
   <a href="index.html" class="btn btn-dark mt-4">Back to Home</a>
 </div>
 <img src="photo.jpg" class="img-fluid rounded mt-3" alt="My Image">
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pro Bootstrap Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body.dark-mode {
+      background-color: #121212;
+      color: #f1f1f1;
+    }
+    .dark-mode .card {
+      background-color: #1e1e1e;
+      color: #fff;
+    }
+    .hero {
+      background: linear-gradient(to right, #0d6efd, #6610f2);
+      color: white;
+      padding: 80px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">ProSite</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Main</a></li>
+        <li class="nav-item">
+          <button class="btn btn-outline-light btn-sm ms-2" onclick="toggleMode()">🌙</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero text-center">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Professional Bootstrap Page</h1>
+    <p class="lead">HTML | Dynamic | Clean UI</p>
+    <button class="btn btn-light btn-lg mt-3" data-bs-toggle="modal" data-bs-target="#infoModal">
+      Learn More
+    </button>
+  </div>
+</section>
+
+<!-- Features -->
+<section id="features" class="container my-5">
+  <h2 class="text-center mb-4">Features</h2>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card shadow h-100">
+        <div class="card-body">
+          <h5 class="card-title">Responsive</h5>
+          <p class="card-text">Fully responsive using Bootstrap Grid.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow h-100">
+        <div class="card-body">
+          <h5 class="card-title">Dynamic UI</h5>
+          <p class="card-text">Modal, form validation, dark mode.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow h-100">
+        <div class="card-body">
+          <h5 class="card-title">Professional</h5>
+          <p class="card-text">Clean, modern, production-style layout.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Form -->
+<section id="contact" class="container my-5">
+  <h2 class="text-center mb-4">Contact Us</h2>
+  <form onsubmit="return validateForm()" class="col-md-6 mx-auto">
+    <div class="mb-3">
+      <label class="form-label">Name</label>
+      <input type="text" id="name" class="form-control">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <input type="email" id="email" class="form-control">
+    </div>
+    <button class="btn btn-primary w-100">Submit</button>
+  </form>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="infoModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">About This Page</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        This is a single-file professional Bootstrap webpage with dynamic features.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-light text-center p-3">
+  © 2026 ProSite | Built with Bootstrap 5
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  function toggleMode() {
+    document.body.classList.toggle("dark-mode");
+  }
+
+  function validateForm() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+
+    if (name === "" || email === "") {
+      alert("Please fill all fields");
+      return false;
+    }
+    alert("Form submitted successfully!");
+    return true;
+  }
+</script>
 
 </body>
 </html>
